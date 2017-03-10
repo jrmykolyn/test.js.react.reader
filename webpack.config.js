@@ -1,3 +1,6 @@
+var ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
+
+
 module.exports = {
     // Application entrypoint.
     entry: './src/index',
@@ -29,9 +32,16 @@ module.exports = {
             // Handle: Styles
             {
                 test: /\.scss$/,
-                loader: 'style-loader!css-loader!sass-loader'
+                loader: ExtractTextPlugin.extract(
+                    {
+                        fallback: 'style-loader', // 'fallback' loader;
+                        use: 'css-loader!sass-loader' // primary loader;
+                    }
+                )
             }
         ]
     },
-    plugins: []
+    plugins: [
+        new ExtractTextPlugin( 'styles.css' )
+    ]
 }

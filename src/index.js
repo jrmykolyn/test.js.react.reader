@@ -9,6 +9,7 @@ import ReactDOM from 'react-dom';
 // IMPORT ASSETS
 // --------------------------------------------------
 import './index.html';
+import './styles/styles.scss';
 
 
 // --------------------------------------------------
