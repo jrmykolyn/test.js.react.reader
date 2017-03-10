@@ -1,3 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #EFEFEF;
+}
+
+.card {
+    width: 300px;
+    max-width: 90%;
+    height: auto;
+    min-height: 300px;
+    background: #FFF;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card:not( :last-child ) {
+    margin-bottom: 20px;
 }

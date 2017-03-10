@@ -15,7 +15,7 @@ export default class Card extends React.Component {
 
     render() {
         return (
-            <article>
+            <article className="card">
                 <h1>{ this.props.data.title || 'FALLBACK' }</h1>
             </article>
         );
