@@ -1,17 +1,25 @@
+@import '../../node_modules/bourbon/app/assets/stylesheets/bourbon';
+@import '../../node_modules/sfco-sass-utils/sfco-sass-utils';
+
 * {
     box-sizing: border-box;
 }
 
 body {
     background-color: #EFEFEF;
+    margin: 0;
+    padding: 0;
+
+    padding: 20px 0;
 }
 
 .card {
-    width: 300px;
-    max-width: 90%;
-    height: auto;
-    min-height: 300px;
+    @include dims( 300px auto );
+    @include min-size( auto 300px );
+    @include max-size( 90% auto );
+
     background: #FFF;
+    box-shadow: 0 2px 20px -4px rgba( 0,0,0,0.2 );
     margin: 0 auto;
     padding: 20px;
 }
