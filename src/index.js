@@ -1,8 +1,8 @@
 // --------------------------------------------------
 // IMPORT MODULES
 // --------------------------------------------------
-import { React } from 'react';
-import { ReactDOM } from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 
 // --------------------------------------------------
@@ -14,13 +14,14 @@ import './index.html';
 // --------------------------------------------------
 // IMPORT APP && COMPONENTS
 // --------------------------------------------------
-import App from './app/app.js';
+import { DATA } from './data/data';
+import App from './app/app';
 
 
 // --------------------------------------------------
 // DO PROGRAM
 // --------------------------------------------------
 ReactDOM.render(
-    <App />,
+    <App DATA={ DATA } />,
     document.getElementById( 'root' )
 );

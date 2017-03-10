@@ -1,22 +1,29 @@
 // --------------------------------------------------
 // IMPORT MODULES
 // --------------------------------------------------
-import { React } from 'react';
+import React from 'react';
 
 
 // --------------------------------------------------
 // DEFINE COMPONENT
 // --------------------------------------------------
 export default class App extends React.Component {
-    constructor() {
-        console.log( 'INSIDE `App` CONSTRUCTOR.' ); /// TEMP
-        super();
+    constructor( props ) {
+        super( props );
+
+        this.state = {
+            DATA: this.props.DATA || []
+        }
     } // /constructor()
 
 
     render() {
-        console.log( 'INSIDE `App` `render()`.' ); /// TEMP
+        let items = this.state.DATA.map( ( item ) => { return (<h2>{ item.title }</h2>); }  );
 
-        return (<h1>App</h1>);
+        return (
+            <div>
+                { items }
+            </div>
+        );
     } // /render()
 } // /App
