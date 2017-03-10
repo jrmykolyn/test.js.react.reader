@@ -16,7 +16,11 @@ export default class Card extends React.Component {
     render() {
         return (
             <article className="card">
-                <h1>{ this.props.data.title || 'FALLBACK' }</h1>
+                <div className="card__header">
+                </div>
+                <div className="card__body">
+                    <h1>{ this.props.data.title || 'FALLBACK' }</h1>
+                </div>
             </article>
         );
     } // /render()
