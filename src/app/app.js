@@ -5,6 +5,12 @@ import React from 'react';
 
 
 // --------------------------------------------------
+// IMPORT COMPONENTS
+// --------------------------------------------------
+import Card from '../components/card';
+
+
+// --------------------------------------------------
 // DEFINE COMPONENT
 // --------------------------------------------------
 export default class App extends React.Component {
@@ -18,7 +24,7 @@ export default class App extends React.Component {
 
 
     render() {
-        let items = this.state.DATA.map( ( item ) => { return (<h2>{ item.title }</h2>); }  );
+        let items = this.state.DATA.map( ( item, i ) => { return <Card data={ item } key={ i } /> }  );
 
         return (
             <div>
