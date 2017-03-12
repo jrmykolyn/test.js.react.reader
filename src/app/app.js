@@ -7,6 +7,7 @@ import React from 'react';
 // --------------------------------------------------
 // IMPORT COMPONENTS
 // --------------------------------------------------
+import Page from '../components/page';
 import Card from '../components/card';
 
 
@@ -18,12 +19,15 @@ export default class App extends React.Component {
         super( props );
 
         this.state = {
-            DATA: this.props.DATA || []
+            DATA: this.props.DATA || [],
+            selectedPage: null
         }
     } // /constructor()
 
 
     render() {
+        console.log( 'INSIDE `App` `render()`' ); /// TEMP
+
         let items = this.state.DATA.map(
             ( item, i ) => {
                 return <Card data={ item } key={ i } showPage={ this.showPage.bind( this ) } />
@@ -32,16 +36,14 @@ export default class App extends React.Component {
 
         return (
             <div>
+                <Page data={ this.state.selectedPage } isActive={ this.state.selectedPage !== null } />
                 { items }
             </div>
         );
     } // /render()
 
 
-    showPage( pageData ) {
-        console.log( 'INSIDE `showPage`' );
-        console.log( 'LOGGING OUT `pageData`' );
-
-        console.log( pageData );
+    showPage( page ) {
+        this.setState( { selectedPage: page } );
     }
 } // /App
