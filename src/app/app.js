@@ -24,7 +24,11 @@ export default class App extends React.Component {
 
 
     render() {
-        let items = this.state.DATA.map( ( item, i ) => { return <Card data={ item } key={ i } /> }  );
+        let items = this.state.DATA.map(
+            ( item, i ) => {
+                return <Card data={ item } key={ i } showPage={ this.showPage.bind( this ) } />
+            }
+        );
 
         return (
             <div>
@@ -32,4 +36,12 @@ export default class App extends React.Component {
             </div>
         );
     } // /render()
+
+
+    showPage( pageData ) {
+        console.log( 'INSIDE `showPage`' );
+        console.log( 'LOGGING OUT `pageData`' );
+
+        console.log( pageData );
+    }
 } // /App

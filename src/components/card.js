@@ -15,7 +15,7 @@ export default class Card extends React.Component {
 
     render() {
         return (
-            <article className="card">
+            <article className="card" onClick={ ( e ) => { this.selectPage(); } }>
                 <div className="card__header">
                 </div>
                 <div className="card__body">
@@ -24,4 +24,12 @@ export default class Card extends React.Component {
             </article>
         );
     } // /render()
+
+
+    selectPage( page ) {
+        console.log( 'INSIDE `select()`' ); /// TEMP
+        console.log( 'INVOKING `this.props.showPage()`' ); /// TEMP
+
+        this.props.showPage( this.props.data );
+    }
 } // /Card
