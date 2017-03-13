@@ -1,0 +1,32 @@
+// --------------------------------------------------
+// VARIABLES 
+// --------------------------------------------------
+$selector: '.hero';
+
+
+// --------------------------------------------------
+// PLACEHOLDERS 
+// --------------------------------------------------
+// Write shared styles in placeholder rules here, then extend them from specific selectors below.
+
+
+// --------------------------------------------------
+// SELECTORS 
+// --------------------------------------------------
+#{$selector} {
+    @include dims( 100% auto );
+    @include max-size( 100% auto );
+    @include min-size( 100% auto );
+
+    background-color: #EFEFEF;
+    padding-top: applyAspect( 2 3, 100% ); // Returns ~66.666666%;
+    position: relative;
+
+    // Child elems.
+    img {
+        @include dims( 100% auto );
+        @include position( absolute, 50% null null 50% );
+
+        transform: translate( -50%, -50% );
+    }
+}

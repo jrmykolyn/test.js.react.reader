@@ -1,6 +1,7 @@
 @import '../../node_modules/bourbon/app/assets/stylesheets/bourbon';
 @import '../../node_modules/sfco-sass-utils/sfco-sass-utils';
 
+@import 'organisms/manifest';
 @import 'pages/page';
 
 * {
@@ -20,54 +21,4 @@ body {
 
 h1 {
     margin: 0;
-}
-
-.card {
-    @include dims( 300px auto );
-    @include max-size( 90% auto );
-
-    background: #FFF;
-    box-shadow: 0 2px 20px -4px rgba( 0,0,0,0.2 );
-    margin: 0 auto;
-}
-
-.card:not( :last-child ) {
-    margin-bottom: 20px;
-}
-
-.card__header {
-    @include dims( 100% auto );
-    @include position( relative );
-
-    background-color: #ff7878;
-    padding-top: applyAspect( 2 3, 100% ) // Returns 66.666666%;
-}
-
-.card__body {
-    @include clearfix;
-
-    padding: 20px;
-    padding-bottom: 0;
-
-    @include descendant( last ) {
-        margin-bottom: 20px;
-    }
-}
-
-.hero {
-    @include dims( 100% auto );
-    @include max-size( 100% auto );
-    @include min-size( 100% auto );
-
-    background-color: #EFEFEF;
-    padding-top: applyAspect( 2 3, 100% ); // Returns ~66.666666%;
-    position: relative;
-
-    // Child elems.
-    img {
-        @include dims( 100% auto );
-        @include position( absolute, 50% null null 50% );
-
-        transform: translate( -50%, -50% );
-    }
 }
