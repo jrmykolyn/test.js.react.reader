@@ -3,6 +3,8 @@
 // --------------------------------------------------
 import * as React from 'react';
 
+import Hero from './hero';
+
 
 // --------------------------------------------------
 // DEFINE COMPONENT
@@ -22,9 +24,7 @@ export default class Page extends React.Component {
             return (
                 <section className="page">
                     <header className="page__header">
-                        <div className="hero">
-                            <img src={ this.props.data.featuredImage.url } alt={ this.props.data.featuredImage.alt } />
-                        </div>
+                        <Hero data={ this.props.data.featuredImage } />
                     </header>
                     <div className="page__body">
                         <h1>{ this.props.data.title || 'FALLBACK' }</h1>
