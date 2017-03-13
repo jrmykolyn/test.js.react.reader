@@ -24,6 +24,8 @@ $selector: '.page';
 #{$selector}__header {
     img {
         @include set( width max-width, 100% );
+
+        display: block;
     }
 }
 

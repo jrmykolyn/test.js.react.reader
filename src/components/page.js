@@ -23,7 +23,7 @@ export default class Page extends React.Component {
                 <section className="page">
                     <header className="page__header">
                         <div className="hero">
-                            <img src="http://lorempixel.com/g/1200/800/" alt="Page 'hero' image." />
+                            <img src={ this.props.data.featuredImage.url } alt={ this.props.data.featuredImage.alt } />
                         </div>
                     </header>
                     <div className="page__body">
