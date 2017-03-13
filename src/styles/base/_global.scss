@@ -1,0 +1,33 @@
+// --------------------------------------------------
+// VARIABLES 
+// --------------------------------------------------
+// Add any SASS variables that are specific to this file here.
+
+
+// --------------------------------------------------
+// PLACEHOLDERS 
+// --------------------------------------------------
+// Write shared styles in placeholder rules here, then extend them from specific selectors below.
+
+
+// --------------------------------------------------
+// SELECTORS 
+// --------------------------------------------------
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    background-color: #EFEFEF;
+    margin: 0;
+    padding: 20px 0;
+
+    font-family: Helvetica, Arial, sans-serif;
+    letter-spacing: 0.25px;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+    margin: 0;
+}

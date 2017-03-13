@@ -1,24 +1,6 @@
 @import '../../node_modules/bourbon/app/assets/stylesheets/bourbon';
 @import '../../node_modules/sfco-sass-utils/sfco-sass-utils';
 
+@import 'base/manifest';
 @import 'organisms/manifest';
 @import 'pages/manifest';
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    color: #333;
-    background-color: #EFEFEF;
-    margin: 0;
-    padding: 20px 0;
-
-    font-family: Helvetica, Arial, sans-serif;
-    letter-spacing: 0.25px;
-    -webkit-font-smoothing: antialiased;
-}
-
-h1 {
-    margin: 0;
-}
