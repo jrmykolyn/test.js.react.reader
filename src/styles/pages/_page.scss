@@ -1,0 +1,40 @@
+// --------------------------------------------------
+// VARIABLES 
+// --------------------------------------------------
+$selector: '.page';
+
+
+// --------------------------------------------------
+// PLACEHOLDERS 
+// --------------------------------------------------
+// Write shared styles in placeholder rules here, then extend them from specific selectors below.
+
+
+// --------------------------------------------------
+// SELECTORS 
+// --------------------------------------------------
+#{$selector} {
+    @include position( fixed, 0 0 0 0 );
+
+    background-color: #FFF;
+    overflow: auto;
+}
+
+
+#{$selector}__header {
+    img {
+        @include set( width max-width, 100% );
+    }
+}
+
+
+#{$selector}__body {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 40px;
+}
+
+
+#{$selector}__footer {
+    
+}

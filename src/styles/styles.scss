@@ -1,6 +1,8 @@
 @import '../../node_modules/bourbon/app/assets/stylesheets/bourbon';
 @import '../../node_modules/sfco-sass-utils/sfco-sass-utils';
 
+@import 'pages/page';
+
 * {
     box-sizing: border-box;
 }
