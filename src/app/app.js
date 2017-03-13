@@ -36,8 +36,8 @@ export default class App extends React.Component {
 
         return (
             <div>
-                <Page data={ this.state.selectedPage } isActive={ this.state.selectedPage !== null } />
                 { items }
+                <Page data={ this.state.selectedPage } isActive={ this.state.selectedPage !== null } />
             </div>
         );
     } // /render()
