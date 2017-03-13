@@ -21,7 +21,16 @@ export default class Page extends React.Component {
         if ( !!this.props.isActive ) {
             return (
                 <section className="page">
-                    <h1>{ this.props.data.title || 'FALLBACK' }</h1>
+                    <header className="page__header">
+                        <div className="hero">
+                            <img src="http://lorempixel.com/g/1200/800/" alt="Page 'hero' image." />
+                        </div>
+                    </header>
+                    <div className="page__body">
+                        <h1>{ this.props.data.title || 'FALLBACK' }</h1>
+                    </div>
+                    <footer className="page__footer">
+                    </footer>
                 </section>
             );
         } else {
